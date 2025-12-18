@@ -51,9 +51,14 @@ export default function MentionsLegales() {
               <h2 className="text-xl sm:text-2xl font-bold text-teal-700 mb-4 border-b-2 border-amber-500 pb-2">
                 Hébergement
               </h2>
-              <p className="text-gray-600 text-sm sm:text-base">
-                <strong className="text-gray-800">Hébergeur :</strong> Vercel Inc., 340 S Lemon Ave #1142, Walnut, CA 91789, USA.
-              </p>
+              <div className="space-y-3 text-gray-600 text-sm sm:text-base">
+                <p>
+                  <strong className="text-gray-800">Hébergeur du site :</strong> Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.
+                </p>
+                <p>
+                  <strong className="text-gray-800">Registrar du nom de domaine :</strong> Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Chypre.
+                </p>
+              </div>
             </section>
 
             {/* Gestion des dons et données */}
