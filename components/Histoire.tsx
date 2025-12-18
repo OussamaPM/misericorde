@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export default function Histoire() {
   return (
-    <section id="histoire" className="py-8 sm:py-12 md:py-16 bg-white">
+    <section id="histoire" className="pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-12 md:pb-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Titre visible uniquement sur mobile, au-dessus de l'image */}
         <div className="flex flex-col items-center mb-6 md:hidden">
           <Image
             src="/logo-misericorde.png"
             alt="Logo Association Miséricorde"
-            width={80}
-            height={80}
-            className="mb-3"
+            width={90}
+            height={90}
+            className="mb-4"
           />
-          <h2 className="text-2xl font-bold text-teal-800 text-center">
+          <h2 className="text-2xl font-bold text-teal-800 text-center leading-tight">
             Comment l&apos;association
             <br />
             a-t-elle vu le jour ?
