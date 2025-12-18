@@ -5,7 +5,6 @@ import { CheckCircle, Info, CreditCard, Building2, Copy, Check } from "lucide-re
 
 export default function DonationSection() {
   const [selectedAmount, setSelectedAmount] = useState("20");
-  const [donationType, setDonationType] = useState<"ponctuel" | "mensuel">("ponctuel");
   const [paymentMethod, setPaymentMethod] = useState<"helloasso" | "rib">("helloasso");
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
@@ -114,29 +113,10 @@ export default function DonationSection() {
 
             {paymentMethod === "helloasso" ? (
               <>
-                {/* Toggle Ponctuel / Mensuel */}
-                <div className="flex justify-center mb-4 sm:mb-6 bg-gray-100 p-1 rounded-full w-max mx-auto">
-                  <button
-                    onClick={() => setDonationType("ponctuel")}
-                    className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium focus:outline-none transition ${
-                      donationType === "ponctuel"
-                        ? "bg-white shadow text-teal-800 font-bold"
-                        : "text-gray-500 hover:text-teal-700"
-                    }`}
-                  >
-                    Ponctuel
-                  </button>
-                  <button
-                    onClick={() => setDonationType("mensuel")}
-                    className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium focus:outline-none transition ${
-                      donationType === "mensuel"
-                        ? "bg-white shadow text-teal-800 font-bold"
-                        : "text-gray-500 hover:text-teal-700"
-                    }`}
-                  >
-                    Mensuel
-                  </button>
-                </div>
+                {/* Message encouragement don mensuel */}
+                <p className="text-center text-sm text-teal-700 font-medium mb-4 sm:mb-6">
+                  Un don mensuel, c&apos;est une aide continue pour ceux qui en ont besoin.
+                </p>
 
                 {/* Grille des montants */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
