@@ -17,6 +17,9 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Association Miséricorde Rahma - Solidarité & Partage",
   description: "Association humanitaire basée à Drancy, œuvrant pour la solidarité et l'entraide envers les plus démunis depuis 2011.",
+  verification: {
+    google: "q-JOzXVdzlgfPQpUaF-ufduoaYbsBmVwizIcqpE7U54",
+  },
 };
 
 export default function RootLayout({
