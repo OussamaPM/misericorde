@@ -1,11 +1,22 @@
+import Image from "next/image";
+
 export default function Histoire() {
   return (
     <section id="histoire" className="py-8 sm:py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Titre visible uniquement sur mobile, au-dessus de l'image */}
-        <h2 className="text-2xl font-bold text-teal-800 mb-6 text-center md:hidden">
-          Comment l&apos;association a-t-elle vu le jour ?
-        </h2>
+        <div className="flex flex-col items-center mb-6 md:hidden">
+          <Image
+            src="/logo-misericorde.png"
+            alt="Logo Association Miséricorde"
+            width={60}
+            height={60}
+            className="mb-3"
+          />
+          <h2 className="text-2xl font-bold text-teal-800 text-center">
+            Comment l&apos;association a-t-elle vu le jour ?
+          </h2>
+        </div>
 
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2">
@@ -22,9 +33,18 @@ export default function Histoire() {
           </div>
           <div className="w-full md:w-1/2">
             {/* Titre visible uniquement sur desktop */}
-            <h2 className="hidden md:block text-3xl font-bold text-teal-800 mb-6">
-              Comment l&apos;association a-t-elle vu le jour ?
-            </h2>
+            <div className="hidden md:flex items-center gap-4 mb-6">
+              <Image
+                src="/logo-misericorde.png"
+                alt="Logo Association Miséricorde"
+                width={60}
+                height={60}
+                className="flex-shrink-0"
+              />
+              <h2 className="text-3xl font-bold text-teal-800">
+                Comment l&apos;association a-t-elle vu le jour ?
+              </h2>
+            </div>
             <p className="text-gray-600 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
               Notre aventure commence par la rencontre d&apos;un groupe de frères
               pendant le mois de Ramadan 2011 dans une mosquée. C&apos;est dans ce
