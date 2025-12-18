@@ -178,7 +178,7 @@ export default function DonationSection() {
                   rel="noopener noreferrer"
                   className="block w-full bg-amber-600 hover:bg-amber-700 text-white text-center font-bold text-base sm:text-lg py-3 sm:py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"
                 >
-                  Procéder au paiement sécurisé
+                  Je fais un don
                 </a>
                 <p className="text-center text-xs text-gray-400 mt-3 sm:mt-4">
                   Redirection vers la plateforme partenaire HelloAsso
