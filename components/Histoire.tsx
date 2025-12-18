@@ -9,12 +9,14 @@ export default function Histoire() {
           <Image
             src="/logo-misericorde.png"
             alt="Logo Association Miséricorde"
-            width={60}
-            height={60}
+            width={80}
+            height={80}
             className="mb-3"
           />
           <h2 className="text-2xl font-bold text-teal-800 text-center">
-            Comment l&apos;association a-t-elle vu le jour ?
+            Comment l&apos;association
+            <br />
+            a-t-elle vu le jour ?
           </h2>
         </div>
 
@@ -33,16 +35,18 @@ export default function Histoire() {
           </div>
           <div className="w-full md:w-1/2">
             {/* Titre visible uniquement sur desktop */}
-            <div className="hidden md:flex items-center gap-4 mb-6">
+            <div className="hidden md:flex items-center gap-5 mb-6">
               <Image
                 src="/logo-misericorde.png"
                 alt="Logo Association Miséricorde"
-                width={60}
-                height={60}
+                width={90}
+                height={90}
                 className="flex-shrink-0"
               />
-              <h2 className="text-3xl font-bold text-teal-800">
-                Comment l&apos;association a-t-elle vu le jour ?
+              <h2 className="text-3xl font-bold text-teal-800 leading-tight">
+                Comment l&apos;association
+                <br />
+                a-t-elle vu le jour ?
               </h2>
             </div>
             <p className="text-gray-600 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
