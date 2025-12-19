@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
             <Link
               href="/mentions-legales"
-              className="inline-flex items-center text-gray-500 text-xs hover:text-gray-300 transition"
+              className="inline-flex items-center text-gray-400 text-xs hover:text-gray-200 transition"
             >
               <FileText className="w-3.5 h-3.5 mr-1.5" />
               Mentions Légales
@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center">
-          <p className="text-gray-500 text-xs">
+          <p className="text-gray-400 text-xs">
             &copy; {new Date().getFullYear()} Association Miséricorde. Tous
             droits réservés.
           </p>

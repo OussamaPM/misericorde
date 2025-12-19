@@ -12,13 +12,15 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <DonationSection />
-      <Actions />
-      <Histoire />
-      <Valeurs />
-      <Remerciements />
-      <ActionsInternational />
+      <main id="main-content">
+        <Hero />
+        <DonationSection />
+        <Actions />
+        <Histoire />
+        <Valeurs />
+        <Remerciements />
+        <ActionsInternational />
+      </main>
       <Footer />
     </>
   );

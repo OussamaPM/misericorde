@@ -20,8 +20,11 @@ export default function Actions() {
             <div className="h-40 sm:h-48 bg-gray-200 overflow-hidden">
               <img
                 src="/hotel-social.jpeg"
-                alt="Hôtels Sociaux"
+                alt="Distribution dans les hôtels sociaux"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                width={400}
+                height={192}
+                loading="lazy"
               />
             </div>
             <div className="p-4 sm:p-6">
@@ -48,8 +51,11 @@ export default function Actions() {
             <div className="h-40 sm:h-48 bg-gray-200 overflow-hidden relative">
               <img
                 src="/la-chapelle-paris.jpg"
-                alt="Distribution Paris"
+                alt="Distribution de repas à Paris La Chapelle"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                width={400}
+                height={192}
+                loading="lazy"
               />
               <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-amber-500 text-white text-xs font-bold px-2 sm:px-3 py-1 rounded-full">
                 Hebdomadaire
@@ -81,9 +87,12 @@ export default function Actions() {
           <div className="group bg-white border rounded-xl overflow-hidden hover:shadow-xl transition duration-300 sm:col-span-2 lg:col-span-1">
             <div className="h-40 sm:h-48 bg-gray-200 overflow-hidden relative">
               <img
-                src="/ramadan-action.png"
-                alt="Ramadan"
+                src="/ramadan-action.jpg"
+                alt="Action spéciale Ramadan distribution de repas"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                width={400}
+                height={192}
+                loading="lazy"
               />
               <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-teal-600 text-white text-xs font-bold px-2 sm:px-3 py-1 rounded-full">
                 Saisonnier

@@ -6,8 +6,11 @@ export default function ActionsInternational() {
           <div className="md:w-1/3 h-48 sm:h-56 md:h-auto bg-gray-200 overflow-hidden">
             <img
               src="/principal.jpg"
-              alt="International"
+              alt="Actions humanitaires internationales"
               className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              width={400}
+              height={300}
+              loading="lazy"
             />
           </div>
           <div className="p-5 sm:p-6 md:p-8 md:w-2/3 flex flex-col justify-center">

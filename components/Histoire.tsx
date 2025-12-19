@@ -25,8 +25,11 @@ export default function Histoire() {
             <div className="relative rounded-lg overflow-hidden shadow-xl sm:shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                alt="Bénévoles"
+                alt="Bénévoles de l'association aidant les personnes dans le besoin"
                 className="w-full"
+                width={500}
+                height={333}
+                loading="lazy"
               />
               <div className="absolute bottom-0 left-0 bg-teal-700 text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-tr-lg text-sm sm:text-base">
                 Depuis 2011

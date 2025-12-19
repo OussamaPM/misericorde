@@ -52,11 +52,14 @@ export default function DonationSection() {
               <img
                 src="/distrib.jpg"
                 className="w-full h-full object-cover object-top"
-                alt="Distribution"
+                alt="Distribution de colis alimentaires"
+                width={500}
+                height={600}
+                loading="lazy"
               />
             </div>
             <div className="relative z-10">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Votre aide change des vies</h3>
+              <p className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Votre aide change des vies</p>
               <p className="mb-4 sm:mb-6 opacity-90 text-sm sm:text-base">
                 Chaque don nous permet de distribuer plus de colis alimentaires et
                 d&apos;aider les familles précaires.
@@ -86,16 +89,17 @@ export default function DonationSection() {
             </div>
 
             {/* Toggle HelloAsso / RIB */}
-            <div className="flex justify-center mb-5 sm:mb-6 bg-gray-100 p-1 rounded-full w-max mx-auto">
+            <div className="flex justify-center mb-5 sm:mb-6 bg-gray-100 p-1 rounded-full w-max mx-auto" role="group" aria-label="Mode de paiement">
               <button
                 onClick={() => setPaymentMethod("helloasso")}
                 className={`flex items-center px-3 sm:px-5 py-2 rounded-full text-sm font-medium focus:outline-none transition ${
                   paymentMethod === "helloasso"
                     ? "bg-white shadow text-teal-800 font-bold"
-                    : "text-gray-500 hover:text-teal-700"
+                    : "text-gray-600 hover:text-teal-700"
                 }`}
+                aria-pressed={paymentMethod === "helloasso"}
               >
-                <CreditCard className="w-4 h-4 mr-1.5" />
+                <CreditCard className="w-4 h-4 mr-1.5" aria-hidden="true" />
                 HelloAsso
               </button>
               <button
@@ -103,10 +107,11 @@ export default function DonationSection() {
                 className={`flex items-center px-3 sm:px-5 py-2 rounded-full text-sm font-medium focus:outline-none transition ${
                   paymentMethod === "rib"
                     ? "bg-white shadow text-teal-800 font-bold"
-                    : "text-gray-500 hover:text-teal-700"
+                    : "text-gray-600 hover:text-teal-700"
                 }`}
+                aria-pressed={paymentMethod === "rib"}
               >
-                <Building2 className="w-4 h-4 mr-1.5" />
+                <Building2 className="w-4 h-4 mr-1.5" aria-hidden="true" />
                 Virement
               </button>
             </div>
@@ -160,7 +165,7 @@ export default function DonationSection() {
                 >
                   Je fais un don
                 </a>
-                <p className="text-center text-xs text-gray-400 mt-3 sm:mt-4">
+                <p className="text-center text-xs text-gray-500 mt-3 sm:mt-4">
                   Redirection vers la plateforme partenaire HelloAsso
                 </p>
               </>
