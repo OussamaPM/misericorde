@@ -6,40 +6,41 @@ Site web de l'Association Miséricorde, une association humanitaire basée en r�
 
 ## Stack Technique
 
-- **Framework** : Next.js 15 (App Router)
+- **Framework** : Next.js 16 (App Router)
 - **Langage** : TypeScript
 - **Styling** : Tailwind CSS v4
 - **Icônes** : Lucide React
-- **Images** : Next/Image pour l'optimisation
+- **Images** : Next/Image pour l'optimisation automatique (WebP, lazy loading, responsive)
 
 ## Structure du Projet
 
 ```
 misericorde/
 ├── app/
-│   ├── layout.tsx          # Layout principal
-│   ├── page.tsx             # Page d'accueil
+│   ├── layout.tsx          # Layout principal (avec preconnect Unsplash)
+│   ├── page.tsx             # Page d'accueil (avec landmark <main>)
 │   ├── globals.css          # Styles globaux Tailwind
 │   └── mentions-legales/
 │       └── page.tsx         # Page mentions légales
 ├── components/
-│   ├── Navbar.tsx           # Navigation fixe avec menu mobile
-│   ├── Hero.tsx             # Section héro avec citation
-│   ├── DonationSection.tsx  # Section don (HelloAsso + RIB)
-│   ├── Actions.tsx          # 3 cartes d'actions principales
+│   ├── Navbar.tsx           # Navigation fixe avec menu mobile (aria-label)
+│   ├── Hero.tsx             # Section héro avec Next/Image priority
+│   ├── DonationSection.tsx  # Section don (HelloAsso + RIB, aria-pressed)
+│   ├── Actions.tsx          # 3 cartes d'actions avec Next/Image
 │   ├── ActionsInternational.tsx  # Section actions internationales
-│   ├── Histoire.tsx         # Histoire de l'association
+│   ├── Histoire.tsx         # Histoire avec image Unsplash optimisée
 │   ├── Valeurs.tsx          # Valeurs (Solidarité, Universalité, Générosité)
 │   ├── Remerciements.tsx    # Section remerciements bénévoles
 │   └── Footer.tsx           # Pied de page avec contact
 ├── public/
 │   ├── logo-misericorde.png # Logo de l'association
-│   ├── liste_associations_humanitaires.webp  # Image hero
-│   ├── distrib.jpg          # Image section don
-│   ├── hotel-social.jpeg    # Image action hôtels sociaux
-│   ├── la-chapelle-paris.jpg # Image distribution Paris
-│   ├── ramadan-action.png   # Image action Ramadan
-│   └── principal.jpg        # Image actions internationales
+│   ├── liste_associations_humanitaires.webp  # Image hero (28KB)
+│   ├── distrib.jpg          # Image section don (60KB)
+│   ├── hotel-social.jpeg    # Image action hôtels sociaux (137KB)
+│   ├── la-chapelle-paris.jpg # Image distribution Paris (150KB)
+│   ├── ramadan-action.jpg   # Image action Ramadan (106KB)
+│   └── principal.jpg        # Image actions internationales (69KB)
+├── next.config.ts           # Config Next.js (remotePatterns Unsplash)
 └── CLAUDE.md                # Cette documentation
 ```
 
@@ -50,8 +51,10 @@ misericorde/
 - Logo + nom de l'association
 - Menu desktop avec liens : Faire un don, Notre Histoire, Nos Actions, Nos Valeurs, Contact
 - Menu hamburger pour mobile (breakpoint lg)
+- **Accessibilité** : aria-label dynamique, aria-expanded sur le bouton menu
 
 ### Hero
+- Next/Image avec `priority` et `fill` pour le LCP
 - Image de fond avec overlay teal (opacity-30)
 - Citation en italique
 - Sous-titre descriptif
@@ -59,8 +62,9 @@ misericorde/
 
 ### DonationSection
 - **Toggle HelloAsso / Virement** pour choisir le mode de paiement
+- **Accessibilité** : role="group", aria-label, aria-pressed sur les boutons
 - **Mode HelloAsso** :
-  - Toggle Ponctuel / Mensuel
+  - Message d'encouragement don mensuel
   - Sélection montant (10€, 20€, 50€, Autre)
   - Équivalence du don
   - Bouton vers HelloAsso
@@ -71,7 +75,7 @@ misericorde/
   - Note SWIFT pour virements internationaux
 
 ### Actions
-3 cartes présentant les actions principales :
+3 cartes présentant les actions principales avec Next/Image optimisé :
 1. Distribution Hôtels Sociaux (450+ repas/semaine)
 2. Distribution de Repas à Paris - La Chapelle (300 repas, mercredi soir)
 3. Action Spéciale Ramadan (70 à 240 repas/soir)
@@ -82,6 +86,7 @@ Section horizontale présentant les actions internationales et aide au cas par c
 ### Histoire
 - Titre au-dessus de l'image sur mobile
 - Layout 2 colonnes sur desktop
+- Image Unsplash optimisée via Next/Image (avec aspect-ratio)
 - Texte décrivant l'origine de l'association (Ramadan 2011)
 - Citation en exergue
 
@@ -137,6 +142,31 @@ Bandeau de remerciement aux bénévoles avec icône cœur
 
 Breakpoints Tailwind utilisés : sm, md, lg, xl
 
+## Performance & Accessibilité
+
+### Scores PageSpeed (Mobile)
+- **Performance** : 82+ (optimisé depuis 65)
+- **Accessibilité** : 96 (optimisé depuis 87)
+- **Bonnes pratiques** : 100
+- **SEO** : 100
+
+### Optimisations appliquées
+- **Images** : Toutes les images utilisent Next/Image avec :
+  - Conversion automatique WebP
+  - Lazy loading intelligent
+  - Attribut `sizes` pour le responsive
+  - `priority` sur l'image LCP (Hero)
+- **Accessibilité** :
+  - Landmark `<main>` sur le contenu principal
+  - `aria-label` sur les boutons interactifs
+  - `aria-expanded` et `aria-pressed` sur les toggles
+  - Contrastes de couleurs améliorés (WCAG AA)
+  - Hiérarchie des titres correcte (h1 > h2 > h3)
+- **Performance** :
+  - Preconnect/dns-prefetch pour Unsplash
+  - Images redimensionnées aux dimensions affichées
+  - Taille totale images : ~550KB (réduit depuis ~6MB)
+
 ## Commandes
 
 ```bash
@@ -166,6 +196,5 @@ npm run start
 ## À faire
 
 - [ ] Créer campagne HelloAsso et mettre à jour l'URL dans DonationSection.tsx
-- [ ] Remplacer l'image de la section Histoire par une vraie photo
+- [ ] Remplacer l'image de la section Histoire par une vraie photo de l'association
 - [ ] Ajouter Google Analytics (optionnel)
-- [ ] Configurer le domaine et SSL
