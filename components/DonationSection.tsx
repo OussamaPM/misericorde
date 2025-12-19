@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { CheckCircle, Info, CreditCard, Building2, Copy, Check } from "lucide-react";
 
 export default function DonationSection() {
@@ -49,13 +50,12 @@ export default function DonationSection() {
           {/* Partie Visuelle / Info */}
           <div className="md:w-5/12 bg-teal-800 text-white p-6 sm:p-8 flex flex-col justify-center relative overflow-hidden">
             <div className="absolute inset-0 opacity-20">
-              <img
+              <Image
                 src="/distrib.jpg"
-                className="w-full h-full object-cover object-top"
                 alt="Distribution de colis alimentaires"
-                width={500}
-                height={600}
-                loading="lazy"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 40vw"
               />
             </div>
             <div className="relative z-10">

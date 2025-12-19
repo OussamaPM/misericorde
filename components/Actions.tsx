@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MapPin, Clock } from "lucide-react";
 
 export default function Actions() {
@@ -17,14 +18,13 @@ export default function Actions() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {/* Action 1 - Hôtels Sociaux */}
           <div className="group bg-white border rounded-xl overflow-hidden hover:shadow-xl transition duration-300">
-            <div className="h-40 sm:h-48 bg-gray-200 overflow-hidden">
-              <img
+            <div className="h-40 sm:h-48 bg-gray-200 overflow-hidden relative">
+              <Image
                 src="/hotel-social.jpeg"
                 alt="Distribution dans les hôtels sociaux"
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                width={400}
-                height={192}
-                loading="lazy"
+                fill
+                className="object-cover group-hover:scale-110 transition duration-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div className="p-4 sm:p-6">
@@ -49,15 +49,14 @@ export default function Actions() {
           {/* Action 2 - Distribution Paris */}
           <div className="group bg-white border rounded-xl overflow-hidden hover:shadow-xl transition duration-300">
             <div className="h-40 sm:h-48 bg-gray-200 overflow-hidden relative">
-              <img
+              <Image
                 src="/la-chapelle-paris.jpg"
                 alt="Distribution de repas à Paris La Chapelle"
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                width={400}
-                height={192}
-                loading="lazy"
+                fill
+                className="object-cover group-hover:scale-110 transition duration-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-amber-500 text-white text-xs font-bold px-2 sm:px-3 py-1 rounded-full">
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-amber-500 text-white text-xs font-bold px-2 sm:px-3 py-1 rounded-full z-10">
                 Hebdomadaire
               </div>
             </div>
@@ -86,15 +85,14 @@ export default function Actions() {
           {/* Action 3 */}
           <div className="group bg-white border rounded-xl overflow-hidden hover:shadow-xl transition duration-300 sm:col-span-2 lg:col-span-1">
             <div className="h-40 sm:h-48 bg-gray-200 overflow-hidden relative">
-              <img
+              <Image
                 src="/ramadan-action.jpg"
                 alt="Action spéciale Ramadan distribution de repas"
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                width={400}
-                height={192}
-                loading="lazy"
+                fill
+                className="object-cover group-hover:scale-110 transition duration-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-teal-600 text-white text-xs font-bold px-2 sm:px-3 py-1 rounded-full">
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-teal-600 text-white text-xs font-bold px-2 sm:px-3 py-1 rounded-full z-10">
                 Saisonnier
               </div>
             </div>

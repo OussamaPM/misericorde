@@ -1,16 +1,17 @@
+import Image from "next/image";
+
 export default function ActionsInternational() {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="group bg-white border rounded-xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col md:flex-row">
-          <div className="md:w-1/3 h-48 sm:h-56 md:h-auto bg-gray-200 overflow-hidden">
-            <img
+          <div className="md:w-1/3 h-48 sm:h-56 md:h-auto bg-gray-200 overflow-hidden relative">
+            <Image
               src="/principal.jpg"
               alt="Actions humanitaires internationales"
-              className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-              width={400}
-              height={300}
-              loading="lazy"
+              fill
+              className="object-cover group-hover:scale-110 transition duration-500"
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
           <div className="p-5 sm:p-6 md:p-8 md:w-2/3 flex flex-col justify-center">
