@@ -9,16 +9,16 @@ export default function DonationSection() {
   const [paymentMethod, setPaymentMethod] = useState<"helloasso" | "rib">("helloasso");
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
-  const amounts = ["10", "20", "50", "other"];
+  const amounts = ["5", "10", "20", "other"];
 
   const getEquivalence = () => {
     switch (selectedAmount) {
+      case "5":
+        return "Avec <strong>5 €</strong>, vous contribuez à un repas chaud.";
       case "10":
         return "Avec <strong>10 €</strong>, vous contribuez à un colis alimentaire.";
       case "20":
         return "Avec <strong>20 €</strong>, vous offrez un colis alimentaire à une famille.";
-      case "50":
-        return "Avec <strong>50 €</strong>, vous nourrissez une famille pendant une semaine.";
       default:
         return "Chaque euro compte pour aider les plus démunis.";
     }
