@@ -9,8 +9,8 @@ export default function Valeurs() {
     },
     {
       icon: Users,
-      title: "Universalité",
-      description: "Une aide apportée sans distinction de race ou de religion.",
+      title: "Bienfaisance",
+      description: "Une aide apportée sans distinction ethnique ou religieuse.",
     },
     {
       icon: Gift,
@@ -23,7 +23,7 @@ export default function Valeurs() {
     <section id="valeurs" className="py-12 sm:py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 text-center max-w-3xl">
         <span className="text-amber-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">
-          Notre Philosophie
+          Notre vision
         </span>
         <h2 className="text-2xl sm:text-3xl font-bold text-teal-800 mt-2 mb-6 sm:mb-8">
           L&apos;essence de notre engagement

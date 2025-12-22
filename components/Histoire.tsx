@@ -65,8 +65,7 @@ export default function Histoire() {
               tantôt de la nourriture, tantôt des vêtements.
             </p>
             <p className="text-gray-600 italic border-l-4 border-amber-500 pl-3 sm:pl-4 text-sm sm:text-base">
-              &ldquo;Observant la précarité croissante en France et touchés par la
-              misère autour de nous, nous avons décidé d&apos;agir.&rdquo;
+              &ldquo;Face à la précarité grandissante en France et à la détresse qui nous entourait, nous avons choisi de nous engager.&rdquo;
             </p>
           </div>
         </div>

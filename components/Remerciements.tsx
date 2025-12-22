@@ -11,8 +11,6 @@ export default function Remerciements() {
         <p className="max-w-2xl mx-auto text-teal-100 text-sm sm:text-base px-2">
           &ldquo;Un grand merci à tous les bénévoles qui nous ont soutenus depuis
           de nombreuses années...&rdquo;
-          <br />
-          Sans votre engagement, rien de tout cela ne serait possible.
         </p>
       </div>
     </section>

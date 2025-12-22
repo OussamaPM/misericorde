@@ -12,7 +12,18 @@ export default function Navbar() {
     <nav className="bg-white shadow-md fixed w-full z-50">
       <div className="container mx-auto px-4 sm:px-6 py-2 sm:py-3 flex justify-between items-center">
         <Link href="#" className="flex items-center space-x-2 sm:space-x-3">
-          <div className="h-14 w-14 sm:h-16 md:h-20 sm:w-16 md:w-20 rounded-full flex items-center justify-center overflow-hidden">
+          {/* Logo mobile (sans la phrase) */}
+          <div className="h-14 w-14 sm:hidden flex items-center justify-center overflow-hidden">
+            <Image
+              src="/logo-mobile.jpg"
+              alt="Logo Association Miséricorde"
+              width={56}
+              height={56}
+              className="object-contain h-full w-full"
+            />
+          </div>
+          {/* Logo desktop (avec la phrase) */}
+          <div className="hidden sm:flex h-16 md:h-20 w-16 md:w-20 items-center justify-center overflow-hidden">
             <Image
               src="/logo-misericorde.png"
               alt="Logo Association Miséricorde"
