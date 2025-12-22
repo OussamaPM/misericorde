@@ -52,20 +52,19 @@ export default function Histoire() {
               </h2>
             </div>
             <p className="text-gray-600 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
-              Notre aventure commence par la rencontre d&apos;un groupe de frères
-              pendant le mois de Ramadan 2011 dans une mosquée. C&apos;est dans ce
-              lieu que, pendant les dix derniers jours de ce mois béni, environ
-              200 repas étaient servis quotidiennement.
+              Tout a commencé en 2011, lorsque quelques personnes se sont réunies
+              pour aider celles et ceux qui en avaient le plus besoin.
+              L&apos;initiative a rapidement pris de l&apos;ampleur, avec la
+              préparation et la distribution quotidienne de repas.
             </p>
             <p className="text-gray-600 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
-              Motivés par cette initiative d&apos;aide aux personnes en difficulté,
-              nous avons décidé de poursuivre l&apos;effort au-delà du Ramadan. En
-              utilisant la cuisine de cette mosquée, nous avons commencé à
-              préparer des repas pour les plus démunis des alentours, distribuant
-              tantôt de la nourriture, tantôt des vêtements.
+              Face aux besoins constatés, il nous a semblé évident de continuer.
+              Depuis, nous préparons et distribuons des repas, et apportons
+              également une aide ponctuelle en vêtements et produits essentiels,
+              en restant au plus proche du terrain.
             </p>
             <p className="text-gray-600 italic border-l-4 border-amber-500 pl-3 sm:pl-4 text-sm sm:text-base">
-              &ldquo;Face à la précarité grandissante en France et à la détresse qui nous entourait, nous avons choisi de nous engager.&rdquo;
+              &laquo; Aujourd&apos;hui, nous poursuivons notre mission avec le même engagement : apporter soutien, chaleur et solidarité à tous ceux qui en ont besoin. &raquo;
             </p>
           </div>
         </div>
