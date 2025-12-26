@@ -5,20 +5,20 @@ import Image from "next/image";
 import { CheckCircle, Info, CreditCard, Building2, Copy, Check } from "lucide-react";
 
 export default function DonationSection() {
-  const [selectedAmount, setSelectedAmount] = useState("20");
+  const [selectedAmount, setSelectedAmount] = useState("25");
   const [paymentMethod, setPaymentMethod] = useState<"helloasso" | "rib">("helloasso");
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
-  const amounts = ["5", "10", "20", "other"];
+  const amounts = ["5", "15", "25", "other"];
 
   const getEquivalence = () => {
     switch (selectedAmount) {
       case "5":
         return "Avec <strong>5 €</strong>, vous contribuez à un repas chaud.";
-      case "10":
-        return "Avec <strong>10 €</strong>, vous contribuez à un colis alimentaire.";
-      case "20":
-        return "Avec <strong>20 €</strong>, vous offrez un colis alimentaire à une famille.";
+      case "15":
+        return "Avec <strong>15 €</strong>, vous contribuez à un colis alimentaire.";
+      case "25":
+        return "Avec <strong>25 €</strong>, vous offrez un colis alimentaire à une famille.";
       default:
         return "Chaque euro compte pour aider les plus démunis.";
     }
@@ -158,7 +158,7 @@ export default function DonationSection() {
 
                 {/* Bouton HelloAsso */}
                 <a
-                  href="https://www.helloasso.com"
+                  href="https://www.helloasso.com/associations/association-misericorde-al-rahma/formulaires/1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-amber-600 hover:bg-amber-700 text-white text-center font-bold text-base sm:text-lg py-3 sm:py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"
